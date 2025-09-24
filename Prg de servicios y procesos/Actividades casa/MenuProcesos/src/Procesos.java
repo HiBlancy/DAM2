@@ -26,6 +26,7 @@ public class Procesos {
                     abrirURL();
                     break;
                 case 4:
+                    abrirPaint();
                     break;
                 case 5:
                     System.out.println("Hasta luego");
@@ -45,7 +46,7 @@ public class Procesos {
         System.out.println("1. Abrir calculadora");
         System.out.println("2. Abrir fichero");
         System.out.println("3. Abrir URL");
-        System.out.println("4.");
+        System.out.println("4. Abrir Paint");
         System.out.println("5. Salir");
 
         int op = sc.nextInt();
@@ -97,13 +98,23 @@ public class Procesos {
     }
     private static void abrirURL() {
         try {
-            System.out.println("Ruta del URL:");
-            String url = sc.nextLine();
+            System.out.println("Dime el nombre web que quieres abrir");
+            String nombre = sc.nextLine();
 
+            String url = "http://" + nombre + ".com";
             ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "start", url);
             pb.start();
         } catch (Exception e) {
         System.out.println("Error " + e.getMessage());
+        }
+    }
+
+    private static void abrirPaint() {
+        try {
+            ProcessBuilder pb = new ProcessBuilder("mspaint");
+            pb.start();
+        }catch (Exception e){
+            System.out.println("Error al abrir Paint");
         }
     }
 }
