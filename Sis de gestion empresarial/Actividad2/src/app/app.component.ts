@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
-import {addIcons} from "ionicons";
-import {MenuComponent} from "./components/menu/menu.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet, MenuComponent],
+  imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor() {
-  }
+  constructor() {}
 }

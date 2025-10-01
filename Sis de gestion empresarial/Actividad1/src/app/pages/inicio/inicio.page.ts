@@ -15,6 +15,8 @@ import {
 } from '@ionic/angular/standalone';
 import {HeaderComponent} from "../../components/header/header.component";
 import {RouterLink} from "@angular/router";
+import {addIcons} from "ionicons";
+import {heartCircleOutline} from "ionicons/icons";
 
 @Component({
   selector: 'app-inicio',
@@ -26,6 +28,7 @@ import {RouterLink} from "@angular/router";
 export class InicioPage implements OnInit {
 
   constructor() {
+    addIcons({heartCircleOutline})
   }
 
   ngOnInit() {

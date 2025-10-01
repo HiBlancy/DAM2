@@ -8,6 +8,8 @@ import {
   IonTitle,
   IonToolbar
 } from "@ionic/angular/standalone";
+import {addIcons} from "ionicons";
+import {heartCircleOutline} from "ionicons/icons";
 
 @Component({
     selector: 'app-menu',
@@ -25,7 +27,9 @@ import {
 })
 export class MenuComponent  implements OnInit {
 
-  constructor() {}
+  constructor() {
+
+  }
 
   ngOnInit() {}
 

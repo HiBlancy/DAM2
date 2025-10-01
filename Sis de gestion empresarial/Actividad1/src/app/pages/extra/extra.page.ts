@@ -11,13 +11,14 @@ import {
 } from '@ionic/angular/standalone';
 import {HeaderComponent} from "../../components/header/header.component";
 import {RouterLink} from "@angular/router";
+import {MenuComponent} from "../../components/menu/menu.component";
 
 @Component({
   selector: 'app-extra',
   templateUrl: './extra.page.html',
   styleUrls: ['./extra.page.scss'],
   standalone: true,
-  imports: [IonContent, IonTitle, CommonModule, FormsModule, HeaderComponent, IonButton, IonGrid, IonRow, IonCol, RouterLink, IonMenuButton]
+  imports: [IonContent, IonTitle, CommonModule, FormsModule, HeaderComponent, IonButton, IonGrid, IonRow, IonCol, RouterLink, IonMenuButton, MenuComponent]
 })
 export class ExtraPage{
   constructor() {}

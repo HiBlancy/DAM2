@@ -1,14 +1,20 @@
 <app-header></app-header>
+<app-menu/>
 
 <ion-content class="ion-padding-top" id="main-content">
-  <ion-grid class="ion-text-center">
-    <ion-title>EXTRA</ion-title>
+  <ion-grid>
+    <ion-title class="ion-text-center">EXTRA</ion-title>
     <ion-row class="ion-padding-top">
-      <ion-col size="6">
-        <ion-button shape="round" [routerLink]="['/inicio']" color="primary">BACK</ion-button>
+      <ion-col class="ion-text-center">
+        <ion-button shape="round" [routerLink]="['/inicio']" color="primary">
+          BACK
+        </ion-button>
       </ion-col>
-      <ion-col size="6">
-        <ion-menu-button shape="round" color="danger" >HELP</ion-menu-button>
+      <ion-col size="2"></ion-col>
+      <ion-col>
+          <ion-menu-button>
+            <ion-button shape="round" color="danger" fill="outline"> HELP</ion-button>
+          </ion-menu-button>
       </ion-col>
     </ion-row>
   </ion-grid>
