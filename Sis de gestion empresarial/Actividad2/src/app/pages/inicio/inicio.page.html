@@ -1,13 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+    <ion-title class="ion-text-center">Inicio</ion-title>
+    <ion-button id="abrir-alert" fill="clear" slot="end">
+      <ion-avatar>
+        <img [src]= " 'assets/photos/avatar01.png' " >
+      </ion-avatar>
+    </ion-button>
+    <ion-alert trigger="abrir-alert" header="¿Deseas moverte a la pagina sheet?" subHeader="Piensatelo bien"
+               message="Puede ser una desicion vital, no respondas a la ligera"
+               [buttons]="botonesAlert">
+    </ion-alert>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    @for (componente of inicio; track componente) {
+      <ion-item>
+        <ion-label>{{ componente.nombre }}</ion-label>
+        <ion-avatar slot="end">
+          <ion-img [src]="componente.ruta + '/' + componente.imagen"></ion-img>
+        </ion-avatar>
+      </ion-item>
+    }
+  </ion-list>
 </ion-content>

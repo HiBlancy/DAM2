@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Amon",
+    "ruta": "assets/photos",
+    "imagen": "avatar01.png"
+  },
+  {
+    "nombre": "Yushu",
+    "ruta": "assets/photos",
+    "imagen": "avatar02.png"
+  },
+  {
+    "nombre": "Shana",
+    "ruta": "assets/photos",
+    "imagen": "avatar03.png"
+  }
+]
