@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CambioMayusculas" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4bfcdd91-63a7-41c8-ac84-65e9273298d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Ejercicio3Procesos/src/UltimaLinea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto/Clase3/src/main/java/progresa/clase3springboot/entity/Direccion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Proyecto/Clase3/src/main/java/progresa/clase3springboot/entity/Restaurante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2Procesos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2Procesos/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2Procesos/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2Procesos/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2Procesos/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2Procesos/Ej2Procesos.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ej2Procesos/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio2.2Procesis/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio2.2Procesis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio2.2Procesis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio2.2Procesis/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio2.2Procesis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio2.2Procesis/Ejercicio2.2Procesis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio2.2Procesis/src/Mayusculas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CambioMayusculas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CambioMayusculas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mayusculas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mayusculas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio3Procesos/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio3Procesos/src/DirPipe.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="33hptotYaTPz3RWMAwiFUSvOICi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CambioMayusculas.executor": "Run",
+    "Application.Mayusculas.executor": "Run",
+    "JAR Application.CambioMayusculas.jar.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ievar/Desktop/DAM2/PSP/Actividades casa/Ejercicio2Procesos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="CambioMayusculas.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/CambioMayusculas/CambioMayusculas.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.CambioMayusculas.jar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4bfcdd91-63a7-41c8-ac84-65e9273298d2" name="Changes" comment="" />
+      <created>1759779377378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759779377378</updated>
+      <workItem from="1759779378354" duration="787000" />
+      <workItem from="1759785326548" duration="1009000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

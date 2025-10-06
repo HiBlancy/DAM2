@@ -1,21 +1,23 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 
 public class CambioMayusculas {
     public static void main(String[] args) {
-        try (
+        try {
+            //lectura
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            PrintWriter pw = new PrintWriter(System.out);
-        )
-        {
+
             String linea;
-            while ((linea = br.readLine()) != null){
-            pw.println(linea.toUpperCase());
-        }
-        }catch (Exception e){
+
+            while ((linea = br.readLine()) != null) {
+                //conertir y sacar
+                String mayusculas = linea.toUpperCase();
+                System.out.println(mayusculas);
+            }
+
+            br.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-
