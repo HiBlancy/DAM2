@@ -3,10 +3,12 @@ import java.io.*;
 public class DirPipe {
     public static void main(String[] args) {
         try{
+            //lista de archivos del directorio actiual
             String[] comando = {"cmd.exe", "/c", "dir"};
 
             Process procesoComando = new ProcessBuilder(comando).start();
 
+            //se lo enviaa todoo al hijo y el hijo solo selecciona la ultima
             String[] comandoHijo = {"java", "-cp", "out/production/Ejercicio3Procesos" , "UltimaLinea"};
             Process procesoHijo = new ProcessBuilder(comandoHijo).start();
 
@@ -18,6 +20,9 @@ public class DirPipe {
                 bwHijo.println(linea);
             }
             bwHijo.flush();
+            bwHijo.close();
+
+            procesoComando.waitFor();
 
             BufferedReader brHijo = new BufferedReader(new InputStreamReader(procesoHijo.getInputStream()));
             String resultado = brHijo.readLine();

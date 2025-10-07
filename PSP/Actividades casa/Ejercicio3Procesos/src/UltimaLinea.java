@@ -10,11 +10,13 @@ public class UltimaLinea {
             String ultima = null;
 
             while ((linea = br.readLine()) != null){
-                ultima =linea;
+                ultima = linea;
             }
 
             if(ultima != null){
             System.out.println(ultima);}
+
+            br.close();
         } catch (Exception e){
             e.printStackTrace();
         }
