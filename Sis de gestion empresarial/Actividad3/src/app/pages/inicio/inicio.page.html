@@ -1,0 +1,30 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar>
+    <ion-title color="primary">{{pageTitle}}</ion-title> <!--Esto va ir cambiando con el boton de abajo de 1 al 20-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card mode="md" color="primary"> <!--Las tarjetas deben ser con un @for para recoger datos de una api-->
+    <ion-card-header>
+      <ion-card-title> Title </ion-card-title> <!--Titulo, subitutlo e imagen en la forntal-->
+      <ion-card-subtitle>subtitulo</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card mode="md" color="primary">
+    <ion-item>
+      <ion-icon slot="end" name="alarm-outline"></ion-icon>
+      <ion-label>Precio</ion-label>
+    </ion-item>
+    <ion-card-content> <!--Conteto, precio y icono en el otro lado de la tarjeta-->
+      texo dento de la card
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center"> <!--Color-->
+    <ion-fab-button (click)="changeRandomTitle()">
+      <ion-icon name="color-wand-outline"> </ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

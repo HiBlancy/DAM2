@@ -10,6 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -17,6 +21,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
+import ievarituma.introandroid.models.DireccionModel;
 import ievarituma.introandroid.models.UsuarioModel;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtEmail;
     private EditText txtPassword;
     private Button btnRegistrarse;
-
-    private Button btnAbrir;
+    private Button btnCrearDireccion;
 
     //Variables de logica
     private int contador;
     private ArrayList<UsuarioModel> listaUsuarios;
+    private ActivityResultLauncher<Intent> launcherDirecciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Log.e("ESTADOS", "1. Estoy en onCreate");
 
         inicializarVistas();
+        inicializarLauchers();
         contador = 0;
 
         btnPulsame.setOnClickListener(new View.OnClickListener() {
@@ -59,22 +65,63 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = txtEmail.getText().toString();
                 String password = txtPassword.getText().toString();
-                UsuarioModel adrian = new UsuarioModel(email, password);
-                Toast.makeText(MainActivity.this, adrian.toString(),
-                        Toast.LENGTH_LONG).show();
+                UsuarioModel miUsuario = new UsuarioModel(email, password);
+
+                Intent intent = new Intent(
+                        MainActivity.this,
+                        SecondActivity.class);
+
+                Bundle bundle = new Bundle();
+                //bundle.putString("MAIL", email);
+                //bundle.putString("PASS", password);
+                bundle.putSerializable("USER", miUsuario);
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+
                 txtEmail.setText("");
                 txtPassword.setText("");
             }
         });
 
-        btnAbrir.setOnClickListener(new View.OnClickListener(){
+        btnCrearDireccion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(
                         MainActivity.this,
-                        SecondActivity.class
+                        CrearDireccionActivity.class
                 );
-                startActivity(intent);
+                launcherDirecciones.launch(intent);
+            }
+        });
+
+    }
+
+    private void inicializarLauchers() {
+        launcherDirecciones = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult o) {
+                if (o.getResultCode() == RESULT_OK) {
+                    if (o.getData() != null) {
+                        Bundle bundle = o.getData().getExtras();
+                        DireccionModel miDireccion =
+                                (DireccionModel) bundle.getSerializable("DIR");
+                        Toast.makeText(
+                                MainActivity.this,
+                                miDireccion.toString(),
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(
+                                MainActivity.this,
+                                "No había coche",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(
+                            MainActivity.this,
+                            "La otra actividad explotó sin permiso",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -85,8 +132,7 @@ public class MainActivity extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtEmailMain);
         txtPassword = findViewById(R.id.txtPasswordMain);
         btnRegistrarse = findViewById(R.id.btnRegistrarseMain);
-
-        btnAbrir = findViewById(R.id.btnAbrirMain);
+        btnCrearDireccion = findViewById(R.id.btnCrearDireccionMain);
     }
 
     @Override

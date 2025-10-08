@@ -1,6 +1,8 @@
 package ievarituma.introandroid.models;
 
-public class UsuarioModel {
+import java.io.Serializable;
+
+public class UsuarioModel implements Serializable {
     private String email;
     private String password;
 
