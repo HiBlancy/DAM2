@@ -1,18 +1,19 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
+  IonBadge,
   IonCard, IonCardContent,
   IonCardHeader, IonCardSubtitle,
   IonCardTitle,
   IonContent, IonFab, IonFabButton,
-  IonHeader, IonIcon, IonItem, IonLabel,
+  IonHeader, IonIcon, IonImg, IonItem, IonLabel,
   IonTitle,
   IonToolbar
 } from '@ionic/angular/standalone';
 import {addIcons} from "ionicons";
 import {alarmOutline, colorWandOutline} from "ionicons/icons";
-import {ProducService, Product} from "../../services/product";
+import {ProductService, Product} from "../../services/product";
 import index from "eslint-plugin-jsdoc";
 
 @Component({
@@ -20,14 +21,14 @@ import index from "eslint-plugin-jsdoc";
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonItem, IonIcon, IonLabel, IonFab, IonFabButton]
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonItem, IonIcon, IonLabel, IonFab, IonFabButton, IonBadge, IonImg]
 })
 export class InicioPage implements OnInit {
-  private productService = inject(ProducService);
+  private productService = inject(ProductService);
 
   products: Product[] = [];
-  activeSlides: { [key: number] : boolean } = {};
-  pageTitle: string = "Actividad 3";
+  pageTitle: string = "Ejercicio 03";
 
   constructor() {
     addIcons({alarmOutline, colorWandOutline})
@@ -41,18 +42,11 @@ export class InicioPage implements OnInit {
     this.productService.getProducts().subscribe({
       next: data => {
         this.products = data;
-        this.products.forEach((_, index) => {
-          this.activeSlides[index] = true;
-        });
       },
       error: error => {
         console.error('Error al cargar los productos: ', error);
       }
     });
-  }
-
-  toggleSlide(index: number) {
-    this.activeSlides[index] = !this.activeSlides[index];
   }
 
   changeRandomTitle(){

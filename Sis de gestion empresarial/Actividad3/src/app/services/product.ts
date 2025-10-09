@@ -18,7 +18,7 @@ export interface Product {
   providedIn: 'root'
 })
 
-export class ProducService{
+export class ProductService{
   private http = inject(HttpClient);
   private apiUrl = 'https://fakestoreapi.com/products';
 
