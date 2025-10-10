@@ -5,10 +5,10 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class ="products-container"> <!--background color-->
+  <div class ="products-container">
     @for (slide of products; track $index){
       <ion-card mode="md">
-        <swiper-container>
+        <swiper-container pagination="true">
           <!--SLIDE 1-->
           <swiper-slide class="slide-1">
             <div class="slide-content">
@@ -16,7 +16,7 @@
                 <ion-img [src]="slide.image" class="product-image" alt="Imagen en slide"></ion-img>
               </div>
               <div class="text-container">
-                <ion-card-header class="card-header">
+                <ion-card-header>
                   <ion-card-title class="product-title">{{slide.title}}</ion-card-title>
                   <ion-card-subtitle class="product-category">{{slide.category}}</ion-card-subtitle>
                 </ion-card-header>
@@ -29,7 +29,7 @@
             <div class="slide-content">
               <ion-item class="price-item" color="tertiary">
                 <ion-icon slot="end" name="alarm-outline" color="light"></ion-icon>
-                <ion-label class="price-label" >{{slide.price}}</ion-label>
+                <ion-label class="price-label" >{{slide.price | euro}}</ion-label>
               </ion-item>
               <ion-card-content class="description-content">
                 <p class="product-description">{{slide.description}}</p>

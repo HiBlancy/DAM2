@@ -1,8 +1,7 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
-  IonBadge,
   IonCard, IonCardContent,
   IonCardHeader, IonCardSubtitle,
   IonCardTitle,
@@ -14,7 +13,8 @@ import {
 import {addIcons} from "ionicons";
 import {alarmOutline, colorWandOutline} from "ionicons/icons";
 import {ProductService, Product} from "../../services/product";
-import index from "eslint-plugin-jsdoc";
+import { register } from 'swiper/element/bundle';
+import {CurrencyPipe} from "../../pipes/currency-pipe";
 
 @Component({
   selector: 'app-inicio',
@@ -22,7 +22,7 @@ import index from "eslint-plugin-jsdoc";
   styleUrls: ['./inicio.page.scss'],
   standalone: true,
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonItem, IonIcon, IonLabel, IonFab, IonFabButton, IonBadge, IonImg]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonItem, IonIcon, IonLabel, IonFab, IonFabButton, IonImg, CurrencyPipe, CurrencyPipe]
 })
 export class InicioPage implements OnInit {
   private productService = inject(ProductService);

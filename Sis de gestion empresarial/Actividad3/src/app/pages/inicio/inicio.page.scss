@@ -5,6 +5,13 @@
 
 ion-card{
   height: 220px;
+  background: #f2f3f6;
+  position: relative;
+  overflow: hidden;
+}
+
+swiper-container{
+  height: 100%;
 }
 
 .slide-1{
@@ -24,6 +31,10 @@ ion-card{
       height: 140px;
       object-fit: contain;
     }
+    ion-img{
+      background: white;
+      margin-left: 10px;
+    }
   }
 
   .text-container {
@@ -35,10 +46,12 @@ ion-card{
 
   .product-title{
     margin-bottom: 32px;
+    min-height: 60px;
   }
 
   .product-category{
     color: var(--ion-color-primary);
+    margin-top: auto;
   }
 }
 

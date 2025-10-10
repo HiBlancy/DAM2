@@ -1,11 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'currency'
+  name: 'euro',
+  standalone: true
 })
 export class CurrencyPipe implements PipeTransform {
 
   transform(value: number): string {
-    return `$${value.toFixed(2)}`;
+    return `€${value.toFixed(2)}`;
   }
 }
